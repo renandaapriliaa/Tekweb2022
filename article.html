@@ -41,45 +41,20 @@
     
   <div class="container pt-3">
     <div class="row">
-
-      <div class="col-md-4">
+      <div class="col-md-4" v-for="item in articles">
         <div class="card">
-          <img class="card-img-top w-100 h-100" src="images/artc1.jpeg" alt="artc1">
+          <img class="card-img-top w-100 h-100" v-bind:src="item.thumbnail" alt="Card image">
           <div class="card-body">
-            <h5 class="card-title">Photography Enthusiast</h5>
-            <p class="card-text">Here is several things why Photography is fun.</p>
-            <a href="https://www.forbes.com/sites/quora/2018/06/07/why-photography-is-one-of-the-most-useful-hobbies-you-can-have/#:~:text=In%20capturing%20moments%20of%20importance,connected%20with%20our%20loved%20ones."
-              class="btn btn-primary">Photography</a>
+            <h5 class="card-title">{{item.title}}</h5>
+            <p class="card-text">{{item.description}}</p>
+            <a :href="'./read.html?article='+item.content" class="btn" role="button">Go Somewhere</a>
           </div>
         </div>
       </div>
-
-      <div class="col-md-4">
-        <div class="card">
-          <img class="card-img-top" src="images/artc2.jpeg" alt="artc2" style="height: 300px;">
-          <div class="card-body">
-            <h5 class="card-title">Yogyakarta</h5>
-            <p class="card-text">Jogja The Never Ending Asia </p>
-            <a href="https://id.wikipedia.org/wiki/Kota_Yogyakarta" class="btn btn-primary">Yogyakarta</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card">
-          <img class="card-img-top"
-            src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80"
-            alt="Card image cap" style="height: 300px;">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
+     </div>
     </div>
   </div>
+</div>
   <hr>
   <footer class="p-2 text-center">
     <h2 style="font-size: 20px;">Renandaapriliaa</h2>
