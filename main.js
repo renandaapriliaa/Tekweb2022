@@ -27,7 +27,7 @@ Vue.createApp({
     getHeaderData() {
       axios
         .get(
-          "https://github.com/renandaapriliaa/Tekweb2022/blob/main/images/image02.JPG?raw=true"
+          "https://raw.githubusercontent.com/renandaapriliaa/tekweb2022/main/contents/header.json"
         )
         .then((res) => {
           this.header = res.data;
@@ -40,7 +40,7 @@ Vue.createApp({
     getArticles() {
       axios
         .get(
-          "https://raw.githubusercontent.com/wenispr2703/tekweb2022/main/contents/articles.json"
+          "https://raw.githubusercontent.com/renandaapriliaa/tekweb2022/main/contents/articles.json"
         )
         .then((res) => {
           this.articles = res.data;
@@ -57,7 +57,7 @@ Vue.createApp({
       console.log(articles);
       axios
         .get(
-          src = "https://raw.githubusercontent.com/wenispr2703/tekweb2022/main/contents/" + articles
+          src = "https://raw.githubusercontent.com/renandaapriliaa/tekweb2022/main/contents/" + articles
         )
         .then((res) => {
           var html = converter.makeHtml(res.data);
