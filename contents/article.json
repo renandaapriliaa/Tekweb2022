@@ -1,0 +1,29 @@
+[
+    {
+	"num": "1",
+        "title":"Why Photography Is One Of The Most Useful Hobbies You Can Have",
+        "description":"Here is several things why Photography is fun.",
+        "thumbnail": "./images/artc1.jpeg",
+        "author": "Renanda Aprilia N",
+        "published_at": "15 April 2022",
+	"content": "article_1.md"
+    },
+	{
+	"num": "2",
+        "title":"Yogyakarta",
+        "description":"Jogja, The never Ending Asia",
+        "thumbnail": "./images/artc2.jpeg",
+        "author": "Renanda Aprilia N",
+        "published_at": "20 April 2022",
+	"content": "article_2.md"
+    },
+	{
+	"num": "3",
+        "title":"This Will Be My Journey bout My First Summit",
+        "description":"To be continued",
+        "thumbnail": "./images/artc3.jpeg",
+        "author": "Renanda Aprilia N",
+        "published_at": "25 April 2022",
+	"content": "article_3.md"
+    }
+]
