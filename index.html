@@ -94,7 +94,7 @@
             <td class="jarak"><b>HTML</b></td>
             <td style="width: 85%;">
               <div class="progress">
-                <div class="progress-bar bg-primary" style="width: 75%;">75%</div>
+                <div class="progress-bar bg-primary" style="width: 80%;">80%</div>
               </div>
             </td>
           </tr>
@@ -102,7 +102,7 @@
             <td class="jarak"><b>CSS</b></td>
             <td style="width: 70%;">
               <div class="progress">
-                <div class="progress-bar bg-secondary" style="width: 83%;">83%</div>
+                <div class="progress-bar bg-secondary" style="width: 70%;">70%</div>
               </div>
             </td>
           </tr>
@@ -110,7 +110,7 @@
             <td class="jarak"><b>JavaScript</b></td>
             <td style="width: 70%;">
               <div class="progress">
-                <div class="progress-bar bg-danger" style="width: 67%;">67%</div>
+                <div class="progress-bar bg-danger" style="width: 65%;">65%</div>
               </div>
             </td>
           </tr>
@@ -130,48 +130,23 @@
         </div>
       </div>
     </div>
-
+    
   <div class="container pt-3">
     <div class="row">
-
-      <div class="col-md-4">
+      <div class="col-md-4" v-for="item in articles">
         <div class="card">
-          <img class="card-img-top w-100 h-100" src="images/artc1.jpeg" alt="artc1">
+          <img class="card-img-top w-100 h-100" v-bind:src="item.thumbnail" alt="Card image">
           <div class="card-body">
-            <h5 class="card-title">Photography Enthusiast</h5>
-            <p class="card-text">Here is several things why Photography is fun.</p>
-            <a href="#"
-              class="btn btn-primary">Photography</a>
+            <h5 class="card-title">{{item.title}}</h5>
+            <p class="card-text">{{item.description}}</p>
+            <a :href="'./read.html?article='+item.content" class="btn" role="button">Go Somewhere</a>
           </div>
         </div>
       </div>
-
-      <div class="col-md-4">
-        <div class="card">
-          <img class="card-img-top" src="images/artc2.jpeg" alt="artc2" style="height: 300px;">
-          <div class="card-body">
-            <h5 class="card-title">Yogyakarta</h5>
-            <p class="card-text">Jogja The Never Ending Asia </p>
-            <a href="#" class="btn btn-primary">Yogyakarta</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card">
-          <img class="card-img-top"
-            src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80"
-            alt="Card image cap" style="height: 300px;">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
+     </div>
     </div>
   </div>
+</div>
   <hr>
   <footer class="p-2 text-center">
     <h2 style="font-size: 20px;">Renandaapriliaa</h2>
@@ -190,6 +165,12 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
+    
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.0.3/showdown.min.js"></script>
+    <script src="./main.js"></script>
+    
 </body>
 
 </html>
