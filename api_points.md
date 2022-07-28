@@ -24,6 +24,7 @@ response:[
     "Linkedin_url": ""
 }
 ]
+```
 
 **Menampilkan data semua pengguna dengan id tertentu**
 ```
@@ -39,6 +40,7 @@ response:
     "Github_url": "https://github.com/r",
     "Linkedin_url": ""
 }
+ ```
  
  **Menambahkan data pengguna**
  ```
@@ -56,6 +58,7 @@ response:
 
 response:
 true 
+```
 
 **Edit data pengguna**
 ```
@@ -74,7 +77,7 @@ data:
  
 response:
 true   
-
+```
 
 **Menghapus data anggota**
 ```
@@ -82,6 +85,7 @@ DELETE: /users/[1]
 
 response:
 true   
+```
 
 ## Portfolios ##
 **Menampilkan semua data portfolio**
@@ -104,6 +108,7 @@ response: [
     "Content": "Holla felas, My Name is Renanda Aprilia Nurjanah, you can call me renan,rena,etc. I'm 21        years old, single happy and free :). Now, i study at Ahmad Dahlan Univeresity in major Information        System on term 4. My hobby is singing and also taking some random p"
 }
 ]
+```
 
 **Menampilkan data portfolio berdasarkan id**
 ```
@@ -134,6 +139,7 @@ data:
 
 response:
 true
+```
 
 **Edit data portofolio**
 ```
@@ -151,6 +157,7 @@ data:
  
 response:
 true   
+```
 
 **Menghapus data pada portofolio**
 ```
@@ -158,6 +165,7 @@ DELETE: /potofolio/[3]
 
 response:
 true
+```
 
 ## Articles ##
 **Menampilkan data semua articles**
@@ -196,6 +204,7 @@ response:[
     "Content": "Here is several things why Photography is fun."
     }
 ]
+```
 
 **Menampilkan data semua articles dengan id tertentu**
 ```
@@ -208,6 +217,7 @@ response:
 "Title": "Photography Enthusiast",
 "Content": "Here is several things why Photography is fun."
 }
+ ```
  
  **Menambahkan data articles**
  ```
@@ -222,6 +232,7 @@ response:
 
 response:
 true 
+```
 
 **Edit data pengguna**
 ```
@@ -236,7 +247,7 @@ data:
  
 response:
 true   
-
+```
 
 **Menghapus data articles**
 ```
@@ -244,7 +255,7 @@ DELETE: /articles/[6]
 
 response:
 true   
-
+ 
 
 
 
