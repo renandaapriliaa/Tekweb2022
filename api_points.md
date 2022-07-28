@@ -234,7 +234,7 @@ response:
 true 
 ```
 
-**Edit data pengguna**
+**Edit data articles**
 ```
 PUT: /articles
 
