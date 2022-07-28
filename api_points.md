@@ -86,7 +86,7 @@ true
 ## Portfolios ##
 **Menampilkan semua data portfolio**
 ```
-GET: /portfolios
+GET: /portfolio
 
 response: [
 {
@@ -105,58 +105,146 @@ response: [
 }
 ]
 
-**Menampilkan semua data portofolio oleh penulis tertentu**
+**Menampilkan data portfolio berdasarkan id**
 ```
-GET: /portfolios/1
+GET: /portofolio/[1]
 
 response:
-[
 
 {
     "id": "1",
     "Nama": "Renanda Aprilia Nurjanah",
     "Avatar": "https://renandaapriliaa.my.id/images/img.jpg",
     "Bio": "College Student & Photography Enthusiast from Indonesia",
-    "Content": "Holla felas, My Name is Renanda Aprilia Nurjanah, you can call me renan,rena,etc. I'm 21        years old, single happy and free :). Now, i study at Ahmad Dahlan Univeresity in major Information        System on term 4. My hobby is singing and also taking some random p"
-}
-]
-
-
-**Menampilkan data portfolio berdasarkan id**
-```
-GET: /portofolios/[id]
-
-response:
-
-{
-          "id"           : "",
-          "author_id"    : "",
-          "author_name"  : "",
-          "title"        : "",
-          "description"  : "",
-          "thumbnail_url": "",
-          "technologies" : ["", "", ...],
-          "project_url"  : "",
-          "project_start": "",
-          "project_end"  : ""
+    "Content": "Holla felas, My Name is Renanda Aprilia Nurjanah, you can call me renan,rena,etc. I'm 21       years old, single happy and free :). Now, i study at Ahmad Dahlan Univeresity in major Information         System on term 4. My hobby is singing and also taking some random p"
 }
 ```
 
 **Menambahkan data portofolio**
 ```
-POST: /portfolios
+POST: /portfolio
 
 data:
 {
-     "author_name"  : "",
-     "title"        : "",
-     "description"  : "",
-     "thumbnail_url": "",
-     "technologies" : ["", "", ...],
-     "project_url"  : "",
-     "project_start": "",
-     "project_end"  : ""
+    "Nama": "Zee Mark",
+    "Avatar": "https://cdn1-production-images-            kly.akamaized.net/K6aqbbvhHZ4h5Xvk2fz8UUvHaYg=/1200x1200/smart/filter",
+    "Bio": "Artist",
+    "Content": "Holla felas, My Name is Renanda Aprilia Nurjanah, you can call me renan,rena,etc. I'm 21        years old, single happy and free :). Now, i study at Ahmad Dahlan Univeresity in major Information        System on term 4. My hobby is singing and also taking some random p"
 }
+
+response:
+true
+
+**Edit data portofolio**
+```
+PUT: /portofolio
+
+data:
+{
+   
+    "Nama": "Zoe Martin",
+    "Avatar": "https://cdn1-production-images-  kly.akamaized.net/K6aqbbvhHZ4h5Xvk2fz8UUvHaYg=/1200x1200/smart/filter",
+    "Bio": "Artist",
+    "Content": "Holla felas, My Name is Renanda Aprilia Nurjanah, you can call me renan,rena,etc. I'm 21        years old, single happy and free :). Now, i study at Ahmad Dahlan Univeresity in major Information        System on term 4. My hobby is singing and also taking some random p"
+
+}
+ 
+response:
+true   
+
+**Menghapus data pada portofolio**
+```
+DELETE: /potofolio/[3]
+
+response:
+true
+
+## Articles ##
+**Menampilkan data semua articles**
+```
+GET: /articles
+
+response:[
+    {
+    "id": "1",
+    "Thumbnail": "https://renandaapriliaa.my.id/images/artc1.jpeg",
+    "Title": "Photography Enthusiast",
+    "Content": "Here is several things why Photography is fun."
+},
+    {
+    "id": "2",
+    "Thumbnail": "https://renandaapriliaa.my.id/images/artc2.jpeg",
+    "Title": "Yogyakarta",
+    "Content": "Jogja The Never Ending Asia"
+},
+    {
+    "id": "3",
+    "Thumbnail": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?        ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869       &q=80",
+    "Title": "Card title",
+    "Content": "Some quick example text to build on the card title"
+},
+    {
+    "id": "4",
+    "Thumbnail": "https://renandaapriliaa.my.id/images/artc1.jpeg",
+    "Title": "Photography Enthusiast",
+    "Content": "Here is several things why Photography is fun."
+},
+    {
+    "id": "5",
+    "Thumbnail": "https://renandaapriliaa.my.id/images/artc1.jpeg",
+    "Title": "Photography Enthusiast",
+    "Content": "Here is several things why Photography is fun."
+    }
+]
+
+**Menampilkan data semua articles dengan id tertentu**
+```
+GET: /artciles/[1]
+
+response:
+{
+"id": "1",
+"Thumbnail": "https://renandaapriliaa.my.id/images/artc1.jpeg",
+"Title": "Photography Enthusiast",
+"Content": "Here is several things why Photography is fun."
+}
+ 
+ **Menambahkan data articles**
+ ```
+ POST: /articles
+ 
+ data:
+ {
+    "Thumbnail": "https://renandaapriliaa.my.id/images/artc1.jpeg",
+    "Title": "Photography Enthusiast",
+    "Content": "Here is several things why Photography is fun."
+}
+
+response:
+true 
+
+**Edit data pengguna**
+```
+PUT: /articles
+
+data:
+{
+"Thumbnail": "https://renandaapriliaa.my.id/images/artc2.jpeg",
+"Title": "Photography Enthusiast",
+"Content": "Here is several things why Photography is fun."
+}
+ 
+response:
+true   
+
+
+**Menghapus data articles**
+```
+DELETE: /articles/[6]
+
+response:
+true   
+
 
 
 
