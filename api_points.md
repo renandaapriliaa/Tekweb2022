@@ -4,38 +4,41 @@
 ```
 GET: /users
 
-response:
-[
-    {
-       "id"           : "",
-       "name"         : "",
-       "motto"        : "",
-       "ig_url"       : "",
-       "gh_url"       : "",
-       "ld_url"       : "",
-       "avatar_url"   : "",
-       
-   },
-   ...
+response:[
+{
+    "id": "2",
+    "Title": "Renanda's Portfolio",
+    "Avatar_url": "https://github.com/renandaapriliaa/Tekwe",
+    "Motto": "Sebuah perjalanan ilmu menjelajah kode. ",
+    "Ig_url": "https://www.instagra",
+    "Github_url": "https://github.com/r",
+    "Linkedin_url": ""
+},
+{
+    "id": "3",
+    "Title": "Oxtella's Portfolio",
+    "Avatar_url": "https://github.com/renandaapriliaa/Tekwe",
+    "Motto": "Sebuah perjalanan ilmu menjelajah kode. ",
+    "Ig_url": "https://www.instagra",
+    "Github_url": "https://github.com/r",
+    "Linkedin_url": ""
+}
 ]
-```
 
 **Menampilkan data semua pengguna dengan id tertentu**
 ```
-GET: /users/[id]
+GET: /users/[2]
 
 response:
 {
-       "id"           : "",
-       "name"         : "",
-       "motto"        : "",
-       "ig_url"       : "",
-       "gh_url"       : "",
-       "ld_url"       : "",
-       "avatar_url"   : "",
-       
- }
- ```
+    "id": "2",
+    "Title": "Renanda's Portfolio",
+    "Avatar_url": "https://github.com/renandaapriliaa/Tekwe",
+    "Motto": "Sebuah perjalanan ilmu menjelajah kode. ",
+    "Ig_url": "https://www.instagra",
+    "Github_url": "https://github.com/r",
+    "Linkedin_url": ""
+}
  
  **Menambahkan data pengguna**
  ```
@@ -43,18 +46,16 @@ response:
  
  data:
  {
-        "nama"        : "",
-        "motto"       : "",
-        "ig_url"      : "",
-        "gh_url"      : "",
-        "ld_url"      : "",
-        "avatar_url"  : "",
+    "Title": "Oxtella's Portfolio",
+    "Avatar_url": "https://github.com/renandaapriliaa/Tekwe",
+    "Motto": "Sebuah perjalanan ilmu menjelajah kode. ",
+    "Ig_url": "https://www.instagra",
+    "Github_url": "https://github.com/r",
+    "Linkedin_url": ""
 }
 
 response:
-true    // if success
-false   // if failure
-```
+true 
 
 **Edit data pengguna**
 ```
@@ -62,76 +63,64 @@ PUT: /users
 
 data:
 {
-       "id"           : "",
-       "name"         : "",
-       "motto"        : "",
-       "ig_url"       : "",
-       "gh_url"       : "",
-       "ld_url"       : "",
-       "avatar_url"   : "",
-       
- }
+    "Title": "Renanda's Portfolio",
+    "Avatar_url": "https://github.com/renandaapriliaa/Tekwe",
+    "Motto": "Sebuah perjalanan ilmu menjelajah kode. ",
+    "Ig_url": "https://www.instagra",
+    "Github_url": "https://github.com/r",
+    "Linkedin_url": ""
+}
  
  
 response:
-true    // if success
-false   // if failure
-```
+true   
+
 
 **Menghapus data anggota**
 ```
-DELETE: /users/[id]
+DELETE: /users/[1]
 
 response:
-true    // if success
-false   // if failure
-```
+true   
 
 ## Portfolios ##
 **Menampilkan semua data portfolio**
 ```
 GET: /portfolios
 
-response:
-[
-    {
-          "id"           : "",
-          "author_id"    : "",
-          "author_name"  : "",
-          "title"        : "",
-          "description"  : "",
-          "thumbnail_url": "",
-          "technologies" : ["", "", ...],
-          "project_url"  : "",
-          "project_start": "",
-          "project_end"  : ""
-     },
-     ...
+response: [
+{
+    "id": "1",
+    "Nama": "Renanda Aprilia Nurjanah",
+    "Avatar": "https://renandaapriliaa.my.id/images/img.jpg",
+    "Bio": "College Student & Photography Enthusiast from Indonesia",
+    "Content": "Holla felas, My Name is Renanda Aprilia Nurjanah, you can call me renan,rena,etc. I'm 21       years old, single happy and free :). Now, i study at Ahmad Dahlan Univeresity in major Information         System on term 4. My hobby is singing and also taking some random p"
+},
+{
+    id": "2",
+    "Nama": "Oxella Martha",
+    "Avatar": "https://cdn1-production- imagesly.akamaized.net/K6aqbbvhHZ4h5Xvk2fz8UUvHaYg=/1200x1200/smart/filter",
+    "Bio": "Artist",
+    "Content": "Holla felas, My Name is Renanda Aprilia Nurjanah, you can call me renan,rena,etc. I'm 21        years old, single happy and free :). Now, i study at Ahmad Dahlan Univeresity in major Information        System on term 4. My hobby is singing and also taking some random p"
+}
 ]
-```
 
 **Menampilkan semua data portofolio oleh penulis tertentu**
 ```
-GET: /portfolios/author/author_id
+GET: /portfolios/1
 
 response:
 [
 
-     {
-          "id"           : "",
-          "author_id"    : "",
-          "author_name"  : "",
-          "title"        : "",
-          "description"  : "",
-          "thumbnail_url": "",
-          "technologies" : ["", "", ...],
-          "project_url"  : "",
-          "project_start": "",
-          "project_end"  : ""
-     },
-     ...
+{
+    "id": "1",
+    "Nama": "Renanda Aprilia Nurjanah",
+    "Avatar": "https://renandaapriliaa.my.id/images/img.jpg",
+    "Bio": "College Student & Photography Enthusiast from Indonesia",
+    "Content": "Holla felas, My Name is Renanda Aprilia Nurjanah, you can call me renan,rena,etc. I'm 21        years old, single happy and free :). Now, i study at Ahmad Dahlan Univeresity in major Information        System on term 4. My hobby is singing and also taking some random p"
+}
 ]
-```
+
 
 **Menampilkan data portfolio berdasarkan id**
 ```
